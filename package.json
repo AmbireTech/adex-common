@@ -1,21 +1,32 @@
 {
-  "name": "adex-common",
-  "version": "1.0.0",
-  "description": "Common logic for AdEx backend and frontend",
-  "main": "index.js",
-  "repository": "git@github.com:AmbireTech/adex-common.git",
-  "author": "AmbireTech",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "typescript": "^4.7.1"
-  },
-  "engines": {
-    "node": ">=18.16.0 <19",
-    "yarn": "~1.22",
-    "npm": "use-yarn"
-  }
+    "name": "adex-common",
+    "version": "1.0.0",
+    "description": "Common logic for AdEx backend and frontend",
+    "main": "index.js",
+    "repository": "git@github.com:AmbireTech/adex-common.git",
+    "author": "AmbireTech",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "format:check": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "prepare": "husky install"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.8.0",
+        "@typescript-eslint/parser": "^6.8.0",
+        "eslint": "^8.51.0",
+        "eslint-config-prettier": "^9.0.0",
+        "husky": "^8.0.3",
+        "prettier": "^3.0.3",
+        "typescript": "^4.7.1"
+    },
+    "engines": {
+        "node": ">=18.16.0 <19",
+        "yarn": "~1.22",
+        "npm": "use-yarn"
+    }
 }
