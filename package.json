@@ -1,0 +1,14 @@
+{
+  "name": "adex-common",
+  "version": "1.0.0",
+  "description": "Common logic for AdEx backend and frontend",
+  "main": "index.js",
+  "repository": "git@github.com:AmbireTech/adex-common.git",
+  "author": "AmbireTech",
+  "license": "MIT",
+  "engines": {
+      "node": ">=18.16.0 <19",
+      "yarn": "~1.22",
+      "npm": "use-yarn"
+  }
+}
