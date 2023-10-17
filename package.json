@@ -6,9 +6,16 @@
   "repository": "git@github.com:AmbireTech/adex-common.git",
   "author": "AmbireTech",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.7.1"
+  },
   "engines": {
-      "node": ">=18.16.0 <19",
-      "yarn": "~1.22",
-      "npm": "use-yarn"
+    "node": ">=18.16.0 <19",
+    "yarn": "~1.22",
+    "npm": "use-yarn"
   }
 }
