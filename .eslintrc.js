@@ -5,14 +5,7 @@ module.exports = {
         node: true
     },
     extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-    overrides: [
-        {
-            files: ['scripts/*.js'],
-            rules: {
-                '@typescript-eslint/no-var-requires': 'off'
-            }
-        }
-    ],
+    overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
