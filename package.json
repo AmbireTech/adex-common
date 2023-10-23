@@ -4,6 +4,9 @@
     "description": "Common logic for AdEx backend and frontend",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
+    "exports": {
+        "./*": "./dist/"
+    },
     "repository": "git@github.com:AmbireTech/adex-common.git",
     "author": "AmbireTech",
     "license": "MIT",
