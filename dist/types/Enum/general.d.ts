@@ -164,7 +164,7 @@ export declare enum IPLocationService {
     NetAcuity = 4
 }
 export declare enum Gender {
-    Male = 'M',
-    Female = 'F',
-    Other = 'O'
+    Male = "M",
+    Female = "F",
+    Other = "O"
 }
