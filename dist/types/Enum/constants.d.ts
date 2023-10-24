@@ -1,18 +1,18 @@
 export declare enum Headers {
-    providerApiKey = 'X-API-KEY',
-    openRTBVersion = 'X-OPENRTB-VERSION'
+    providerApiKey = "X-API-KEY",
+    openRTBVersion = "X-OPENRTB-VERSION"
 }
 export declare enum QueryParams {
-    providerApiKey = 'apiKey',
-    openRTBVersion = 'openRTBversion'
+    providerApiKey = "apiKey",
+    openRTBVersion = "openRTBversion"
 }
 export declare enum SupportedORTBVersions {
-    v2_5 = '2.5',
-    v2_6 = '2.6'
+    v2_5 = "2.5",
+    v2_6 = "2.6"
 }
 export declare enum ViewEventType {
-    impression = 'IMPRESSION',
-    click = 'CLICK'
+    impression = "IMPRESSION",
+    click = "CLICK"
 }
 export declare enum RequestEventType {
     request = 0,

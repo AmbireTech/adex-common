@@ -1,2 +1,2 @@
-import * as types from './types'
-export { types }
+import * as types from './types';
+export { types };
