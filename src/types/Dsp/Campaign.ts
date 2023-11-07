@@ -44,12 +44,12 @@ export type AdUnit = {
 export type Validator = {
     id: string
     url: string
-    fee: string
+    fee: bigint
 }
 
 export type Bound = {
-    min: string
-    max: string
+    min: bigint
+    max: bigint
 }
 
 export type PricingBound = {
