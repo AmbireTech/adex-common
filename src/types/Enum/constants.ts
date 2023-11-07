@@ -1,6 +1,7 @@
 export enum Headers {
     providerApiKey = 'X-API-KEY',
-    openRTBVersion = 'X-OPENRTB-VERSION'
+    openRTBVersion = 'X-OPENRTB-VERSION',
+    uiAuth = 'X-UI-AUTH'
 }
 
 export enum QueryParams {
