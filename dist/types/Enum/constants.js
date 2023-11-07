@@ -5,6 +5,7 @@ var Headers;
 (function (Headers) {
     Headers["providerApiKey"] = "X-API-KEY";
     Headers["openRTBVersion"] = "X-OPENRTB-VERSION";
+    Headers["uiAuth"] = "X-UI-AUTH";
 })(Headers = exports.Headers || (exports.Headers = {}));
 var QueryParams;
 (function (QueryParams) {
