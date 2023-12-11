@@ -159,6 +159,7 @@ export type Campaign = {
     nonce: bigint
 
     // Spec Props - mutable
+    /** wallet account address */
     owner: string
     title: string
     adUnits: AdUnit[]
@@ -167,6 +168,7 @@ export type Campaign = {
     targetingRules: TargetingRule[]
     eventSubmission: EventSubmission[]
     activeFrom: bigint
+    activeTo: bigint
 
     // User inputs
     targetingInput: TargetingInput
@@ -175,7 +177,13 @@ export type Campaign = {
     status: CampaignStatus
     reviewStatus: ReviewStatus
     reviewMessage: string
+
+    // other
     /** Timestamp in ms */
     modified: bigint
     archived: boolean
+    /** user address */
+    createdBy: string
+    /** user address */
+    lastModifiedBy: string
 }
