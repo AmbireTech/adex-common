@@ -1,3 +1,8 @@
+export enum EventType {
+    CLICK = 'CLICK',
+    IMPRESSION = 'IMPRESSION'
+}
+
 export type Format = {
     /** Width in device independent pixels (DIPS). */
     w?: number
@@ -53,8 +58,28 @@ export type Bound = {
 }
 
 export type PricingBound = {
-    IMPRESSION?: Bound
-    CLICK?: Bound
+    [EventType.IMPRESSION]?: Bound
+    [EventType.CLICK]?: Bound
+}
+
+export enum RateLimitType {
+    ip = 'ip',
+    uid = 'uid'
+}
+
+export type RateLimit = {
+    type: RateLimitType
+    timeframe: bigint
+}
+
+export type EventSubmissionRule = {
+    uids: string[]
+    evTypes?: EventType[] | null
+    rateLimit?: RateLimit
+}
+
+export type EventSubmission = {
+    allow: EventSubmissionRule
 }
 
 export type TargetingRuleProps =
@@ -108,6 +133,22 @@ export type TargetingInput = {
     }
 }
 
+export enum ReviewStatus {
+    inQue,
+    inReview,
+    awaitingUserChanges,
+    approved,
+    declined
+}
+
+export enum CampaignStatus {
+    created,
+    inReview,
+    active,
+    closedByUser,
+    expired
+}
+
 export type Campaign = {
     id: string
     creator: string
@@ -124,7 +165,16 @@ export type Campaign = {
     validators: Validator[]
     pricingBounds: PricingBound
     targetingRules: TargetingRule[]
+    eventSubmission: EventSubmission[]
+    activeFrom: bigint
 
     // User inputs
     targetingInput: TargetingInput
+
+    // Statuses
+    status: CampaignStatus
+    reviewStatus: ReviewStatus
+    reviewMessage: string
+    updated: bigint
+    archived: boolean
 }
