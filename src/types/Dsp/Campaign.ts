@@ -8,10 +8,6 @@ export type Format = {
     w?: number
     /** Height in device independent pixels (DIPS). */
     h?: number
-    /** Relative width when expressing size as a ratio. */
-    wratio?: number
-    /** Relative height when expressing size as a ratio. */
-    hratio?: number
 }
 
 export type Banner = {
@@ -149,17 +145,21 @@ export enum CampaignStatus {
     expired
 }
 
+// TODO:  assets cfg - chain, addr, name etc.
+
 export type Campaign = {
+    // Spec Props - immutable
     id: string
-    creator: string
-    depositAssetAddr: string
-    depositAmount: bigint
-    network: number
+    outpaceAssetAddr: string
+    outpaceAddr: string
+    spendLimit: bigint
+    outpaceChainId: number
     /** Timestamp in ms */
     created: bigint
     nonce: bigint
 
     // Spec Props - mutable
+    owner: string
     title: string
     adUnits: AdUnit[]
     validators: Validator[]
@@ -175,6 +175,7 @@ export type Campaign = {
     status: CampaignStatus
     reviewStatus: ReviewStatus
     reviewMessage: string
-    updated: bigint
+    /** Timestamp in ms */
+    modified: bigint
     archived: boolean
 }
