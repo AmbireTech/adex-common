@@ -3,6 +3,11 @@ export enum EventType {
     IMPRESSION = 'IMPRESSION'
 }
 
+export enum CampaignType {
+    DSP,
+    ZK
+}
+
 export type Format = {
     /** Width in device independent pixels (DIPS). */
     w?: number
@@ -148,6 +153,7 @@ export enum CampaignStatus {
 // TODO:  assets cfg - chain, addr, name etc.
 
 export type Campaign = {
+    type: CampaignType
     // Spec Props - immutable
     id: string
     outpaceAssetAddr: string
@@ -166,7 +172,10 @@ export type Campaign = {
     validators: Validator[]
     pricingBounds: PricingBound
     targetingRules: TargetingRule[]
-    eventSubmission: EventSubmission[]
+    // TODO: this should be on an account/wallet level as there will be on chanel per user/chain/token
+    // + unlimited rate limit from backend ADX vault (for the dsp events)
+    eventSubmission?: EventSubmission[]
+    //** activeFrom - can not be before created */
     activeFrom: bigint
     activeTo: bigint
 
@@ -182,7 +191,7 @@ export type Campaign = {
     /** Timestamp in ms */
     modified: bigint
     archived: boolean
-    /** user address */
+    /** signer address - the address that signs wallet tx/msg */
     createdBy: string
     /** user address */
     lastModifiedBy: string
