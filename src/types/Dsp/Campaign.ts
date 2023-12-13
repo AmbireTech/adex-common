@@ -119,10 +119,18 @@ export type TargetingRule = {
     [key in TargetingRuleProps]: string | boolean | TargetingRule[] | number | bigint
 }
 
-export type TargetingInputProps = 'in' | 'nin' | 'allIn'
+export type TargetingInputProps = 'in' | 'nin'
+export type AdvancedInputProps =
+    | 'includeIncentivized'
+    | 'disableFrequencyCapping'
+    | 'limitDailyAverageSpending'
 
 export type TargetingInputSingle = {
     [key in TargetingInputProps]: string[]
+}
+
+export type AdvancedInputSingle = {
+    [key in TargetingInputProps]: boolean
 }
 
 export type TargetingInput = {
@@ -131,6 +139,7 @@ export type TargetingInput = {
         location: TargetingInputSingle
         categories: TargetingInputSingle
         publishers: TargetingInputSingle
+        advanced: AdvancedInputSingle
     }
 }
 
@@ -160,7 +169,7 @@ export type Campaign = {
     // NOTE: temp until we have tokens cfg/lists where we van get this info
     outpaceAssetDecimals: string
     outpaceAddr: string
-    spendLimit: bigint
+    campaignBudget: bigint
     outpaceChainId: number
     /** Timestamp in ms */
     created: bigint
