@@ -119,18 +119,24 @@ export type TargetingRule = {
     [key in TargetingRuleProps]: string | boolean | TargetingRule[] | number | bigint
 }
 
-export type TargetingInputProps = 'in' | 'nin'
 export type AdvancedInputProps =
     | 'includeIncentivized'
     | 'disableFrequencyCapping'
     | 'limitDailyAverageSpending'
 
+/** Use all in for easier ui state management */
+export type TargetingInputApplyProp = 'in' | 'nin' | 'all'
+
+// NOTE: instead of dealing with null, changing props etc. on the UI, these TargetingInputSingle can be
+// used for keeping the forms for in/nin/all without the need to clean the arrays and use separate obj/logic to store it
 export type TargetingInputSingle = {
-    [key in TargetingInputProps]: string[]
+    in: string[]
+    nin: string[]
+    apply: TargetingInputApplyProp
 }
 
 export type AdvancedInputSingle = {
-    [key in TargetingInputProps]: boolean
+    [key in AdvancedInputProps]: boolean
 }
 
 export type TargetingInput = {
@@ -190,9 +196,6 @@ export type Campaign = {
     activeFrom: bigint
     activeTo: bigint
 
-    // User inputs
-    targetingInput: TargetingInput
-
     // Statuses
     status: CampaignStatus
     reviewStatus: ReviewStatus
@@ -206,4 +209,10 @@ export type Campaign = {
     createdBy: string
     /** user address */
     lastModifiedBy: string
+}
+
+/** to be used on the UI with Campaign => Campaign & CampaignWithTargetingInput */
+export type CampaignWithTargetingInput = {
+    // User inputs
+    targetingInput: TargetingInput
 }
