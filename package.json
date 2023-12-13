@@ -2,11 +2,11 @@
     "name": "adex-common",
     "version": "1.0.0",
     "description": "Common logic for AdEx backend and frontend",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts",
+    "main": "index.js",
+    "typings": "index.d.ts",
     "exports": {
-        ".": "./dist/index.js",
-        "./dist/types": "./dist/types/index.js"
+        ".": "./index.js",
+        "./types": "./types/index.js"
     },
     "repository": "git@github.com:AmbireTech/adex-common.git",
     "author": "AmbireTech",
