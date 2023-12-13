@@ -196,6 +196,9 @@ export type Campaign = {
     activeFrom: bigint
     activeTo: bigint
 
+    // User inputs
+    targetingInput: TargetingInput
+
     // Statuses
     status: CampaignStatus
     reviewStatus: ReviewStatus
@@ -209,10 +212,4 @@ export type Campaign = {
     createdBy: string
     /** user address */
     lastModifiedBy: string
-}
-
-/** to be used on the UI with Campaign => Campaign & CampaignWithTargetingInput */
-export type CampaignWithTargetingInput = {
-    // User inputs
-    targetingInput: TargetingInput
 }
