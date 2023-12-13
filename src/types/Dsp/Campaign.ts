@@ -157,6 +157,8 @@ export type Campaign = {
     // Spec Props - immutable
     id: string
     outpaceAssetAddr: string
+    // NOTE: temp until we have tokens cfg/lists where we van get this info
+    outpaceAssetDecimals: string
     outpaceAddr: string
     spendLimit: bigint
     outpaceChainId: number
@@ -185,7 +187,7 @@ export type Campaign = {
     // Statuses
     status: CampaignStatus
     reviewStatus: ReviewStatus
-    reviewMessage: string
+    reviewMessage?: string
 
     // other
     /** Timestamp in ms */
