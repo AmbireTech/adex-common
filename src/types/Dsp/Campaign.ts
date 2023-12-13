@@ -128,9 +128,9 @@ export type TargetingInputSingle = {
 export type TargetingInput = {
     version: string
     inputs: {
-        location: TargetingInputSingle[]
-        categories: TargetingInputSingle[]
-        publishers: TargetingInputSingle[]
+        location: TargetingInputSingle
+        categories: TargetingInputSingle
+        publishers: TargetingInputSingle
     }
 }
 
