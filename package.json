@@ -5,6 +5,12 @@
     "repository": "git@github.com:AmbireTech/adex-common.git",
     "author": "AmbireTech",
     "license": "MIT",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./dist/types": "./dist/types/index.js"
+    },
     "scripts": {
         "build": "tsc",
         "format:check": "prettier --check .",
