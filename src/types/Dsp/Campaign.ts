@@ -160,6 +160,7 @@ export enum ReviewStatus {
 export enum CampaignStatus {
     created,
     inReview,
+    ready,
     active,
     closedByUser,
     expired

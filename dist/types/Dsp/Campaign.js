@@ -36,7 +36,8 @@ var CampaignStatus;
 (function (CampaignStatus) {
     CampaignStatus[CampaignStatus["created"] = 0] = "created";
     CampaignStatus[CampaignStatus["inReview"] = 1] = "inReview";
-    CampaignStatus[CampaignStatus["active"] = 2] = "active";
-    CampaignStatus[CampaignStatus["closedByUser"] = 3] = "closedByUser";
-    CampaignStatus[CampaignStatus["expired"] = 4] = "expired";
+    CampaignStatus[CampaignStatus["ready"] = 2] = "ready";
+    CampaignStatus[CampaignStatus["active"] = 3] = "active";
+    CampaignStatus[CampaignStatus["closedByUser"] = 4] = "closedByUser";
+    CampaignStatus[CampaignStatus["expired"] = 5] = "expired";
 })(CampaignStatus = exports.CampaignStatus || (exports.CampaignStatus = {}));
