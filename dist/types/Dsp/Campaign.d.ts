@@ -105,7 +105,7 @@ export type Campaign = {
     type: CampaignType;
     id: string;
     outpaceAssetAddr: string;
-    outpaceAssetDecimals: string;
+    outpaceAssetDecimals: number;
     outpaceAddr: string;
     campaignBudget: bigint;
     outpaceChainId: number;
