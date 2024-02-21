@@ -174,7 +174,7 @@ export type Campaign = {
     id: string
     outpaceAssetAddr: string
     // NOTE: temp until we have tokens cfg/lists where we van get this info
-    outpaceAssetDecimals: string
+    outpaceAssetDecimals: number
     outpaceAddr: string
     campaignBudget: bigint
     outpaceChainId: number
