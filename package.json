@@ -1,6 +1,6 @@
 {
     "name": "adex-common",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Common logic for AdEx backend and frontend",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -30,7 +30,7 @@
         "typescript": "^4.7.1"
     },
     "engines": {
-        "node": ">=18.16.0 <19",
+        "node": ">=16.20.0 <19",
         "yarn": "~1.22",
         "npm": "use-yarn"
     }

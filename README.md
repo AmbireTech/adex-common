@@ -7,3 +7,9 @@ Package for common logic, constants, interfaces used in AdEx apps.
 ```
 yarn install
 ```
+
+## Build
+
+```
+yarn run build
+```
