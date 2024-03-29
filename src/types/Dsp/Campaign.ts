@@ -139,13 +139,22 @@ export type AdvancedInputSingle = {
     [key in AdvancedInputProps]: boolean
 }
 
+export type Placement = 'site' | 'app'
+
+export type TargetingPlacementInput = {
+    in: Placement[]
+    nin: Placement[]
+    apply: TargetingInputApplyProp
+}
+
 export type TargetingInput = {
     version: string
     inputs: {
         location: TargetingInputSingle
         categories: TargetingInputSingle
         publishers: TargetingInputSingle
-        advanced: AdvancedInputSingle
+        placements: TargetingInputSingle
+        advanced: TargetingPlacementInput
     }
 }
 
