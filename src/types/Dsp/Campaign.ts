@@ -153,8 +153,8 @@ export type TargetingInput = {
         location: TargetingInputSingle
         categories: TargetingInputSingle
         publishers: TargetingInputSingle
-        placements: TargetingInputSingle
-        advanced: TargetingPlacementInput
+        placements: TargetingPlacementInput
+        advanced: AdvancedInputSingle
     }
 }
 
