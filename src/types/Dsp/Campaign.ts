@@ -115,9 +115,14 @@ export type TargetingRuleProps =
     | 'get'
     | 'set'
 
-export type TargetingRule = {
-    [key in TargetingRuleProps]: string | boolean | TargetingRule[] | number | bigint
-}
+export type TargetingRule =
+    | {
+          [key in TargetingRuleProps]?: TargetingRule | TargetingRule[]
+      }
+    | string
+    | number
+    | bigint
+    | boolean
 
 export type AdvancedInputProps =
     | 'includeIncentivized'
