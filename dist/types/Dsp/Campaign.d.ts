@@ -63,9 +63,10 @@ export type EventSubmission = {
     allow: EventSubmissionRule;
 };
 export type TargetingRuleProps = 'onlyShowIf' | 'if' | 'and' | 'ifNot' | 'ifNot' | 'do' | 'in' | 'nin' | 'intersects' | 'at' | 'eq' | 'lt' | 'gt' | 'gte' | 'not' | 'or' | 'div' | 'mod' | 'mul' | 'add' | 'sub' | 'max' | 'min' | 'mulDiv' | 'bn' | 'split' | 'endsWith' | 'startsWith' | 'get' | 'set';
+export type TargetingRuleValue = string | number | bigint | boolean;
 export type TargetingRule = {
     [key in TargetingRuleProps]?: TargetingRule | TargetingRule[];
-} | string | number | bigint | boolean;
+} | TargetingRuleValue | TargetingRuleValue[];
 export type AdvancedInputProps = 'includeIncentivized' | 'disableFrequencyCapping' | 'limitDailyAverageSpending';
 /** Use all in for easier ui state management */
 export type TargetingInputApplyProp = 'in' | 'nin' | 'all';
