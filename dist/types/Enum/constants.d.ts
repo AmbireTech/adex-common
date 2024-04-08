@@ -1,3 +1,4 @@
+export { Alpha3Code } from 'i18n-iso-countries';
 export declare enum Headers {
     providerApiKey = "X-API-KEY",
     openRTBVersion = "X-OPENRTB-VERSION",
