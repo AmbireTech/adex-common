@@ -1,5 +1,7 @@
-import { Alpha3Code, alpha2ToAlpha3, getNames } from 'i18n-iso-countries'
+import { Alpha3Code, alpha2ToAlpha3, getNames, registerLocale } from 'i18n-iso-countries'
+import enLang from 'i18n-iso-countries/langs/en.json'
 
+registerLocale(enLang)
 const CountryNames = getNames('en')
 
 export const AllCountries: Array<{ code: Alpha3Code; name: string }> = Object.keys(CountryNames)
