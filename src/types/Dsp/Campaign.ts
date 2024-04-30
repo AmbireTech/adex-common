@@ -175,6 +175,7 @@ export enum CampaignStatus {
     inReview,
     ready,
     active,
+    paused,
     closedByUser,
     expired
 }
