@@ -106,8 +106,9 @@ export declare enum CampaignStatus {
     inReview = 1,
     ready = 2,
     active = 3,
-    closedByUser = 4,
-    expired = 5
+    paused = 4,
+    closedByUser = 5,
+    expired = 6
 }
 export type Campaign = {
     type: CampaignType;
