@@ -177,7 +177,8 @@ export enum CampaignStatus {
     active,
     paused,
     closedByUser,
-    expired
+    expired,
+    exhausted
 }
 
 // TODO:  assets cfg - chain, addr, name etc.

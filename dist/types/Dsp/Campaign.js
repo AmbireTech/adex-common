@@ -41,4 +41,5 @@ var CampaignStatus;
     CampaignStatus[CampaignStatus["paused"] = 4] = "paused";
     CampaignStatus[CampaignStatus["closedByUser"] = 5] = "closedByUser";
     CampaignStatus[CampaignStatus["expired"] = 6] = "expired";
+    CampaignStatus[CampaignStatus["exhausted"] = 7] = "exhausted";
 })(CampaignStatus = exports.CampaignStatus || (exports.CampaignStatus = {}));
