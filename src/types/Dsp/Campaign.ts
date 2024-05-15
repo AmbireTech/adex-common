@@ -171,6 +171,7 @@ export enum ReviewStatus {
 }
 
 export enum CampaignStatus {
+    draft,
     created,
     inReview,
     ready,

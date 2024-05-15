@@ -102,14 +102,15 @@ export declare enum ReviewStatus {
     declined = 4
 }
 export declare enum CampaignStatus {
-    created = 0,
-    inReview = 1,
-    ready = 2,
-    active = 3,
-    paused = 4,
-    closedByUser = 5,
-    expired = 6,
-    exhausted = 7
+    draft = 0,
+    created = 1,
+    inReview = 2,
+    ready = 3,
+    active = 4,
+    paused = 5,
+    closedByUser = 6,
+    expired = 7,
+    exhausted = 8
 }
 export type Campaign = {
     type: CampaignType;
