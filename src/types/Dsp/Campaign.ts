@@ -171,7 +171,6 @@ export enum ReviewStatus {
 }
 
 export enum CampaignStatus {
-    draft,
     created,
     inReview,
     ready,
@@ -179,7 +178,8 @@ export enum CampaignStatus {
     paused,
     closedByUser,
     expired,
-    exhausted
+    exhausted,
+    draft
 }
 
 // TODO:  assets cfg - chain, addr, name etc.
