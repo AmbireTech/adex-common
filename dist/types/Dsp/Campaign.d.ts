@@ -110,7 +110,8 @@ export declare enum CampaignStatus {
     closedByUser = 5,
     expired = 6,
     exhausted = 7,
-    draft = 8
+    draft = 8,
+    rejected = 9
 }
 export type Campaign = {
     type: CampaignType;

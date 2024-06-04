@@ -43,4 +43,5 @@ var CampaignStatus;
     CampaignStatus[CampaignStatus["expired"] = 6] = "expired";
     CampaignStatus[CampaignStatus["exhausted"] = 7] = "exhausted";
     CampaignStatus[CampaignStatus["draft"] = 8] = "draft";
+    CampaignStatus[CampaignStatus["rejected"] = 9] = "rejected";
 })(CampaignStatus = exports.CampaignStatus || (exports.CampaignStatus = {}));
