@@ -18,3 +18,12 @@ export const AllCountries: Array<{ code: Alpha3Code; name: string }> = Object.ke
     code: Alpha3Code
     name: string
 }>
+
+export const CountryData: Map<Alpha3Code, { name: string }> = (() => {
+    const data: Map<Alpha3Code, { name: string }> = new Map()
+    Object.values(AllCountries).forEach(({ code, name }) => {
+        data.set(code, { name })
+    })
+
+    return data
+})()

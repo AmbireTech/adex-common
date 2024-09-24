@@ -3,3 +3,6 @@ export declare const AllCountries: Array<{
     code: Alpha3Code;
     name: string;
 }>;
+export declare const CountryData: Map<Alpha3Code, {
+    name: string;
+}>;

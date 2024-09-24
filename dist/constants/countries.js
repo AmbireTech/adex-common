@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AllCountries = void 0;
+exports.CountryData = exports.AllCountries = void 0;
 const i18n_iso_countries_1 = require("i18n-iso-countries");
 const en_json_1 = __importDefault(require("i18n-iso-countries/langs/en.json"));
 (0, i18n_iso_countries_1.registerLocale)(en_json_1.default);
@@ -19,3 +19,10 @@ exports.AllCountries = Object.keys(CountryNames)
     };
 })
     .filter((c) => c !== null);
+exports.CountryData = (() => {
+    const data = new Map();
+    Object.values(exports.AllCountries).forEach(({ code, name }) => {
+        data.set(code, { name });
+    });
+    return data;
+})();
