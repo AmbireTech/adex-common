@@ -127,6 +127,7 @@ export type AdvancedInputProps =
     | 'includeIncentivized'
     | 'disableFrequencyCapping'
     | 'limitDailyAverageSpending'
+    | 'aggressiveBidding'
 
 /** Use all in for easier ui state management */
 export type TargetingInputApplyProp = 'in' | 'nin' | 'all'
