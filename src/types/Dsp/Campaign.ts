@@ -128,6 +128,7 @@ export type AdvancedInputProps =
     | 'disableFrequencyCapping'
     | 'limitDailyAverageSpending'
     | 'aggressiveBidding'
+    | 'looseSourceCTR'
 
 /** Use all in for easier ui state management */
 export type TargetingInputApplyProp = 'in' | 'nin' | 'all'
