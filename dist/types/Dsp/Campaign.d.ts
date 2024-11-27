@@ -67,7 +67,7 @@ export type TargetingRuleValue = string | number | bigint | boolean;
 export type TargetingRule = {
     [key in TargetingRuleProps]?: TargetingRule | TargetingRule[];
 } | TargetingRuleValue | TargetingRuleValue[];
-export type AdvancedInputProps = 'includeIncentivized' | 'disableFrequencyCapping' | 'limitDailyAverageSpending' | 'aggressiveBidding';
+export type AdvancedInputProps = 'includeIncentivized' | 'disableFrequencyCapping' | 'limitDailyAverageSpending' | 'aggressiveBidding' | 'looseSourceCTR';
 /** Use all in for easier ui state management */
 export type TargetingInputApplyProp = 'in' | 'nin' | 'all';
 export type TargetingInputSingle = {
