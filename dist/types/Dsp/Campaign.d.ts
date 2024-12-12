@@ -91,6 +91,7 @@ export type TargetingInput = {
         categories: TargetingInputSingle;
         publishers: TargetingInputSingle;
         placements: TargetingPlacementInput;
+        ssp?: TargetingInputSingle;
         advanced: AdvancedInputSingle;
     };
 };
